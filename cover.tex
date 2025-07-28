@@ -1,0 +1,49 @@
+\documentclass[a5paper]{article}
+\usepackage[paperwidth=420pt,paperheight=595pt,margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{fancybox}
+\usepackage{setspace}
+\usepackage{ragged2e}
+\usepackage{helvet} % for sans-serif font (Arial-like)
+
+% No page number or headers
+\thispagestyle{empty}
+\setlength{\parindent}{0pt}
+
+\begin{document}
+
+% logo placement
+\begin{center}
+  \includegraphics[scale=0.30]{largelogo.jpg}
+\end{center}
+
+% Negative vspace to move title up (will overlap logo if necessary,
+% title drawn after logo so in foreground)
+\vspace*{-1cm}
+\begin{center}
+  \Huge\textbf{Scorebook}
+\end{center}
+
+% Address text box with smaller font
+\begin{center}
+  \fbox{%
+    \begin{minipage}{0.6\textwidth}
+      \sffamily\small
+      \raggedright
+      Boylston Chess Club\\
+      35 Kingston St.~Unit~1\\
+      Boston, MA~02111\\
+      \url{https://boylstonchess.org}\\
+      td@boylstonchess.org
+    \end{minipage}
+  }
+\end{center}
+
+% add spacing before Player name line
+\vspace*{1cm}
+
+% Player name line
+\noindent\Large\textbf{Player:}\underline{\hspace{0.7\textwidth}}
+
+\end{document}
