@@ -1,6 +1,26 @@
 \documentclass{article}
 \usepackage[paperwidth=148mm,paperheight=210mm,margin=0mm]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage{helvet}
+
+% If a previous build used TikZ/PGF, blank.aux may contain \pgfsyspdfmark
+% commands. Provide a harmless fallback so builds don't error/hang when PGF
+% isn't loaded.
+\providecommand\pgfsyspdfmark[3]{}
+
 \pagestyle{empty}
+\setlength{\parindent}{0pt}
+
 \begin{document}
-\null
+\sffamily
+
+% Put a single line of text 1.5cm above the bottom edge.
+% This uses a fixed-height vbox to avoid any surprises with vertical glue.
+\noindent
+\vbox to \paperheight{%
+  \vss
+  \hbox to \paperwidth{\hss\small\href{https://github.com/mikeb26/boylstonchessclub-tdbot}{https://github.com/mikeb26/boylstonchessclub-tdbot}~v0.3.0\hss}%
+  \vskip 1.5cm
+}
+
 \end{document}

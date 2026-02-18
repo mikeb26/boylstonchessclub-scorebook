@@ -8,7 +8,7 @@ build: 50pages.pdf coverspread.pdf
 
 .PHONY: clean
 clean:
-	rm -rf page2_unrotated.pdf page2.pdf page1_nologo.pdf page1_trans.pdf page1.pdf page1_and_2.pdf 50pages.pdf logo.pdf blank.pdf coverspread.pdf blank.aux blank.log temp.ps cover.pdf cover.aux cover.log cover.out
+	rm -rf page2_unrotated.pdf page2.pdf page1_nologo.pdf page1_trans.pdf page1.pdf page1_and_2.pdf 50pages.pdf logo.pdf blank.pdf coverspread.pdf blank.aux blank.log temp.ps cover.pdf cover.aux cover.log cover.out blank.out
 
 blank.pdf: blank.tex
 	pdflatex blank.tex
