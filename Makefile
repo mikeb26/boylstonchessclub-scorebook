@@ -2,13 +2,13 @@ numbers := $(shell seq 1 25)
 pages   := $(foreach n,$(numbers),1-2)
 
 .PHONY: build
-build: 50pages.pdf coverspread.pdf
-	echo "Book internal content: 50pages.pdf"
+build: 60pages.pdf coverspread.pdf
+	echo "Book internal content: 60pages.pdf"
 	echo "Book cover: coverspread.pdf"
 
 .PHONY: clean
 clean:
-	rm -rf page2_unrotated.pdf page2.pdf page1_nologo.pdf page1_trans.pdf page1.pdf page1_and_2.pdf 50pages.pdf logo.pdf blank.pdf coverspread.pdf blank.aux blank.log temp.ps cover.pdf cover.aux cover.log cover.out blank.out
+	rm -rf page2_unrotated.pdf page2.pdf page1_nologo.pdf page1_trans.pdf page1.pdf page1_and_2.pdf 60pages.pdf logo.pdf blank.pdf coverspread.pdf blank.aux blank.log temp.ps cover.pdf cover.aux cover.log cover.out blank.out
 
 blank.pdf: blank.tex
 	pdflatex blank.tex
@@ -38,8 +38,8 @@ page1.pdf: page1_trans.pdf
 page1_and_2.pdf: page1.pdf page2.pdf
 	pdftk page1.pdf page2.pdf cat output page1_and_2.pdf
 
-50pages.pdf: page1_and_2.pdf
-	pdftk page1_and_2.pdf cat $(pages) output 50pages.pdf
+60pages.pdf: page1_and_2.pdf
+	pdftk page1_and_2.pdf cat $(pages) output 60pages.pdf
 
 logo.pdf: logo.png
 	mkdir -p ~/.config/ImageMagick
