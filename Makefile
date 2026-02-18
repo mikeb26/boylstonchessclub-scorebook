@@ -1,4 +1,4 @@
-numbers := $(shell seq 1 25)
+numbers := $(shell seq 1 30)
 pages   := $(foreach n,$(numbers),1-2)
 
 .PHONY: build
